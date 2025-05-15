@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post, Body } from '@nestjs/common';
 import { ExchangeService } from './exchange.service';
 @Controller('exchange')
 export class ExchangeController {
@@ -10,4 +10,9 @@ export class ExchangeController {
         return { rate };
     }
 
+    @Post('transaction')
+    async simulateTransaction(@Body('amountEUR') amountEUR: number) {
+        const transaction = await this.exchangeService.simulateTransaction(amountEUR);
+        return transaction;
+    }
 }
