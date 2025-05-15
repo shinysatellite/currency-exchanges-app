@@ -12,7 +12,6 @@ export class ExchangeService {
 
     async getExchangeRate() {
         const cachedRate = await this.cacheManager.get<number>('eurToPlnRate');
-        console.log('Cached rate:', cachedRate);
         if (cachedRate) {
             return cachedRate;
         }
@@ -20,9 +19,8 @@ export class ExchangeService {
             headers: { 'x-api-key': this.API_KEY },
         });
 
-        console.log('API response:', response.data);
-        const rate = response.data.rate; // assuming response shape { rate: number }
-        await this.cacheManager.set('eurToPlnRate', rate, 60);
-        return rate;
+        const { exchange_rate } = response.data;
+        await this.cacheManager.set('eurToPlnRate', exchange_rate, 60);
+        return exchange_rate;
     }
 }
