@@ -20,7 +20,7 @@ export class ExchangeService {
         });
 
         const { exchange_rate } = response.data;
-        await this.cacheManager.set('eurToPlnRate', exchange_rate, 60);
+        await this.cacheManager.set('eurToPlnRate', exchange_rate, 60000);
         return exchange_rate;
     }
 }
