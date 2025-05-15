@@ -14,9 +14,12 @@ A fullstack application built with **NestJS** (backend) and **Next.js + Tailwind
 ```.
 currency-exchange-app/
 ├── backend/ # NestJS app (port 3001)
-│ └── src/
-│ ├── exchange/ # Business logic & endpoints
-│ └── app.module.ts # Main module
+│ ├── src/
+│ │  ├── exchange/ # Business logic & endpoints
+│ │  │  ├── exchange.controller.ts  #controller
+│ │  │  ├── exchange.module.ts      #module
+│ │  │  ├── exchange.service.ts     #service
+│ │  └── app.module.ts # Main module
 ├── frontend/ # Next.js app (port 3000)
 │ └── pages.tsx # UI for rate display + transaction form
 
