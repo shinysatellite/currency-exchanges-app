@@ -11,6 +11,8 @@ A fullstack application built with **NestJS** (backend) and **Next.js + Tailwind
 
 ## 📦 Project Structure
 
+---
+
 currency-exchange-app/
 ├── backend/ # NestJS app (port 3001)
 │ └── src/
@@ -25,6 +27,8 @@ currency-exchange-app/
 ## 🚀 Getting Started
 
 ### Prerequisites
+
+---
 
 - Node.js 18+
 - npm or yarn
