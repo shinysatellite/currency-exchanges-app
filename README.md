@@ -4,25 +4,23 @@ A fullstack application built with **NestJS** (backend) and **Next.js + Tailwind
 
 ## Tech Stack
 
-- **Frontend:** Next.js 14, React, TailwindCSS
+- **Frontend:** Next.js 15, React, TailwindCSS
 - **Backend:** NestJS, Axios, CacheManager
 - **Testing:** Jest
 - **API Provider:** Dummy Exchange API (secured with API key)
 
 ## 📦 Project Structure
 
----
-
+```.
 currency-exchange-app/
 ├── backend/ # NestJS app (port 3001)
 │ └── src/
 │ ├── exchange/ # Business logic & endpoints
 │ └── app.module.ts # Main module
 ├── frontend/ # Next.js app (port 3000)
-│ └── pages/
-│ └── index.tsx # UI for rate display + transaction form
+│ └── pages.tsx # UI for rate display + transaction form
 
----
+```
 
 ## 🚀 Getting Started
 
