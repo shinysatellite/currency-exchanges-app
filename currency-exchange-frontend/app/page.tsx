@@ -11,9 +11,8 @@ export default function Home() {
   useEffect(() => {
     async function fetchRate() {
       const res = await fetch('http://localhost:3001/exchange/rate');
-      console.log("res", res);
-      const data = await res.json();
-      setRate(data.rate);
+      const { rate } = await res.json();
+      setRate(rate);
     }
     fetchRate();
   }, []);

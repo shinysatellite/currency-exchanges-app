@@ -59,6 +59,6 @@ npm run dev
 ### 4. Running Tests
 
 ```bash
-cd backend
+cd currency-exchange-backend
 npm run test
 ```
